@@ -1,5 +1,3 @@
-// require and instantiate express
-//const app = require('express')() with no "var app =express();"
 var express = require('express');
 var app = express();
 var mysql = require('mysql');
@@ -29,7 +27,9 @@ app.get("/", function(req, res) {
 
 app.get("/post", function(req, res) {
   connection.query('SELECT * from test ', function(error, result) {
-    res.render("post", {result: result});
+    res.render("post", {
+      result: result
+    });
   })
 });
 
@@ -45,12 +45,12 @@ app.post("/post", function(req, res) {
   var datos = {
     name: name,
     desc: desc,
-    parafo:parafo,
-    picture:picture
+    parafo: parafo,
+    picture: picture
   }
   connection.query('INSERT INTO test SET ?', datos, function(error, result) {
     console.log("here insert")
-console.log(result);
+    console.log(result);
     res.redirect("/post");
   })
 });
@@ -61,14 +61,15 @@ app.get("/post/new", function(req, res) {
 });
 
 
-//find the post id  and retrieve the data
 app.get("/postOpen/:id", function(req, res) {
   var idd = req.params.id;
   connection.query('SELECT * FROM test where id=?', idd, function(err, result) {
     if (err) {
       console.log(err)
     } else {
-      res.render("postOpen", {resultado: result});
+      res.render("postOpen", {
+        resultado: result
+      });
 
     }
   })
@@ -76,7 +77,7 @@ app.get("/postOpen/:id", function(req, res) {
 })
 app.post("/:id", function(req, res) {
   var iddd = req.params.id;
-connection.query('DELETE FROM test where id=?',iddd, function(error, result) {
-  res.redirect("/post");
-})
+  connection.query('DELETE FROM test where id=?', iddd, function(error, result) {
+    res.redirect("/post");
+  })
 })

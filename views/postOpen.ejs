@@ -1,26 +1,30 @@
 <% include partials/header %>
 
 
-<center><h1>Posts</h1></center>
-<br>
-<br>
+  <center>
+    <h1>Posts</h1></center>
+  <br>
+  <br>
 
-<div >
-  <center><img src='<%= resultado[0].picture %>'></center>
-</div>
-<br>
-<div class="container">
+  <div>
+    <center><img src='<%= resultado[0].picture %>'></center>
+  </div>
+  <br>
+  <div class="container">
 
-<center><h3><%=resultado[0].name%></h3></center>
-<p><%= resultado[0].parafo %></p>
-</div>
+    <center>
+      <h3><%=resultado[0].name%></h3></center>
+    <p>
+      <%= resultado[0].parafo %>
+    </p>
+  </div>
 
 
-<form action="/<%= resultado[0].id %>" method="POST">
+  <form action="/<%= resultado[0].id %>" method="POST">
 
     <br>
-  <button class="btn btn-primary btn-large" >Delete Post</button> </div>
-</form>
-  
+    <button class="btn btn-primary btn-large">Delete Post</button> </div>
+  </form>
 
-<% include partials/footer %>
+
+  <% include partials/footer %>
