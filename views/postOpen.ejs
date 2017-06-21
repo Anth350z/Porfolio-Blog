@@ -7,29 +7,20 @@
 
 <div >
   <center><img src='<%= resultado[0].picture %>'></center>
-  <!-- <%= resultado[0].picture%> -->
 </div>
 <br>
 <div class="container">
 
 <center><h3><%=resultado[0].name%></h3></center>
 <p><%= resultado[0].parafo %></p>
-<!-- <img src=<%= "resultado[0].picture "%>> -->
 </div>
 
 
 <form action="/<%= resultado[0].id %>" method="POST">
-    <!-- <div class="form-group"> -->
-    <!-- btn btn-primary btn-large -->
+
     <br>
   <button class="btn btn-primary btn-large" >Delete Post</button> </div>
 </form>
-    <!-- //btn btn-lg btn-primary btn-block -->
-
-<!-- <% resultado.forEach(function(campground){ %>
-           <h2><%=campground.name%></h2>
-               <h4><%= campground.last %></h4>
-           <% }); %> -->
-
+  
 
 <% include partials/footer %>
