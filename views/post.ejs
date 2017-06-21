@@ -1,0 +1,32 @@
+<% include partials/header %>
+  <div id="estilo" class="">
+    <!-- <header class="page-header"> -->
+    <div id="header" class="page-header">
+
+      <h1>Post</h1>
+      <p>welcome!!!</p>
+      <p>
+        <a class="btn btn-primary btn-large" href="/post/new">Add New Post</a>
+      </p>
+    </div>
+
+    <center><div class="row  col-lg-12 col-sm-6 text-center" style="display:flex; flex-wrap: wrap;">
+      <% result.forEach(function(post){ %>
+        <div id="postcolor" class="container .z-depth-5">
+          <h2><%=post.name%></h2>
+
+          <div class="">
+            <!-- <%=post.image%> -->
+              <img src='<%= post.picture %>'>
+
+          </div>
+          <h4><%= post.desc %></h4>
+          <p><a href="/postOpen/<%= post.id %>" class="btn btn-default btn-lg">Read More</a>
+          </p>
+        </div>
+        <hr>
+        <% }); %>
+    </div></center>
+  </div>
+
+  <% include partials/footer %>
