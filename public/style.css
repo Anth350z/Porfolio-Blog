@@ -1,84 +1,90 @@
-
-.navbar-default{
-  background-color: #D3A0A0 ;
+.borderWrapper, .jumbotron {
+  background-color: rgb(244, 164, 96);
+  margin: 20px;
 }
 
-
-body{
-  padding-top: 30px;
-  background-color: #f1f1f1;
-  /*background-image: url(pic.jpg);*/
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-img{
+img {
   width: 200px;
   height: 200px;
-    box-shadow: 0 0 20px black;
-}
-.container{
-/*background-color: #90f3e2;*/
-background: rgba(223, 240, 216, 0.73);
-
+  
 }
 
-.new{
-  background-color: orange;
-  width: 30%; margin: 25px auto;
+.navbar-default {
+  background-color: MEDIUMSEAGREEN;
+  border: none;
 }
-#boton{
+
+body {
+  padding-top: 30px;
+  background-color: MEDIUMSEAGREEN;
+}
+
+#link {
+  border: 1px solid white;
+  background-color: PALEGREEN;
+}
+
+.new {
+  background-color: rgb(0, 139, 139);
+  width: 30%;
+  margin: 25px auto;
+}
+
+
+/*post bottom size*/
+
+#boton {
   width: 200px;
-
 }
 
-#header{
+#header {
   width: 400px;
-  margin-left:20px
+  margin-left: 20px
 }
 
 
 /*color of the container for the post*/
+
 #postcolor {
   width: 50em;
   /*height: 300px;*/
   background-color: #f1f1f1;
 }
 
-
-hr{
+hr {
   width: 800px;
   height: 30px;
- border-style: solid;
- border-color: #8c8b8b;
- border-width: 1px 0 0 0;
- border-radius: 20px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
 }
 
-hr:before{
+hr:before {
   width: 800px;
-
   display: block;
   content: "";
   height: 30px;
   margin-top: -31px;
   border-style: solid;
-  border-color: #8c8b8b;
+  border-color: white;
   border-width: 0 0 1px 0;
   border-radius: 20px;
-  /*max-width: 600px;
-    border-color: #999999;*/
+
 }
 
-h2{
+h2 {
   text-transform: uppercase;
-    font-family: "cursive"Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-align: left;
+  font-family: "cursive"Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: left;
 }
 
-.container{
-    margin-top: 1px;
-    margin-bottom: 1px;
-    box-shadow: 0 0 20px black;
-    padding:0 15px 0 15px;
+.container {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  box-shadow: 0 0 20px black;
+  padding: 0 15px 0 15px;
+  background-color: PALEGREEN;
 }
